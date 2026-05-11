@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+  <title>Controle Financeiro</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-zinc-950 text-white min-h-screen p-8">
+
+  <div class="max-w-4xl mx-auto bg-zinc-900 p-8 rounded-3xl shadow-2xl">
+
+    <h1 class="text-4xl font-bold mb-2">
+      Controle Financeiro
+       <i class=" animate-bounce fa-solid fa-money-bill-wave text-green-400 pl-4"></i>
+    </h1>
+
+    <p class="text-zinc-400 mb-8">
+      Adicione ganhos e gastos
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-4">
+
+      <div>
+        <label class="block mb-2">Títulos</label>
+
+        <input
+          id="titulos"
+          type="text"
+          placeholder="Mercado, Uber, Lanche"
+          class="w-full p-3 rounded-2xl bg-zinc-800 border border-zinc-700"
+        >
+      </div>
+
+      <div>
+        <label class="block mb-2">Valores</label>
+
+        <input
+          id="valores"
+          type="text"
+          placeholder="120, 35, 18.50"
+          class="w-full p-3 rounded-2xl bg-zinc-800 border border-zinc-700"
+        >
+      </div>
+
+    </div>
+
+    <div class="flex gap-4 mt-6">
+
+      <button
+        id="btnGasto"
+        class="flex-1 p-3 rounded-2xl bg-red-500"
+      >
+        Gasto
+      </button>
+
+      <button
+        id="btnGanho"
+        class="flex-1 p-3 rounded-2xl bg-zinc-800"
+      >
+        Ganho
+      </button>
+
+    </div>
+
+    <button
+      id="adicionar"
+      class="w-full bg-blue-600 hover:bg-blue-700 p-4 rounded-2xl mt-6"
+    >
+      Adicionar
+    </button>
+
+    <div class="bg-zinc-800 p-6 rounded-2xl mt-8">
+
+      <h2 class="text-2xl font-bold mb-4">
+        Resumo
+      </h2>
+
+      <div id="lista" class="space-y-2 mb-6"></div>
+
+      <div class="grid md:grid-cols-3 gap-4">
+
+        <div class="bg-green-600 p-4 rounded-2xl">
+          <p>Ganhos</p>
+          <h3 id="ganhos" class="text-2xl font-bold">
+            R$0.00
+          </h3>
+        </div>
+
+        <div class="bg-red-600 p-4 rounded-2xl">
+          <p>Gastos</p>
+          <h3 id="gastos" class="text-2xl font-bold">
+            R$0.00
+          </h3>
+        </div>
+
+        <div class="bg-blue-600 p-4 rounded-2xl">
+          <p>Saldo</p>
+          <h3 id="saldo" class="text-2xl font-bold">
+            R$0.00
+          </h3>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button
+      id="exportar"
+      class="w-full bg-zinc-700 hover:bg-zinc-600 p-4 rounded-2xl mt-6"
+    >
+      Exportar .md
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
