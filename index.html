@@ -7,9 +7,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    
-    <link rel="icon" type="image/png" href="https://vitorsamuel-pkg.github.io/controleFinanceiro/favicon.png" />
-    <link rel="shortcut icon" href="https://vitorsamuel-pkg.github.io/controleFinanceiro/favicon.png" type="image/png" />
+
+    <link rel="icon" href="./icon.png" />
+    <link rel="apple-touch-icon" href="./icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#000000" />
 
     <title>Controle Financeiro</title>
 
@@ -22,7 +24,9 @@
 
   <body class="bg-zinc-950 text-white min-h-screen p-4 md:p-8">
     <div class="flex flex-col md:flex-row justify-center items-start gap-8">
-      <div class="w-full md:flex-1 max-w-4xl bg-zinc-900 p-6 md:p-8 rounded-3xl shadow-2xl">
+      <div
+        class="w-full md:flex-1 max-w-4xl bg-zinc-900 p-6 md:p-8 rounded-3xl shadow-2xl"
+      >
         <h1 class="text-4xl font-bold mb-2">
           Controle Financeiro
           <i
@@ -96,7 +100,9 @@
           </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row justify-between pt-4 items-stretch gap-4">
+        <div
+          class="flex flex-col lg:flex-row justify-between pt-4 items-stretch gap-4"
+        >
           <button
             id="excluir"
             class="w-full lg:w-auto bg-red-700 hover:bg-red-600 p-4 rounded-2xl"
@@ -121,12 +127,10 @@
           </div>
         </div>
       </div>
-      <div
-        class="w-full md:w-[320px] bg-zinc-900 rounded-3xl shadow-2xl p-6"
-      >
-            <h2 class="text-2xl font-bold mb-4">Histórico</h2>
+      <div class="w-full md:w-[320px] bg-zinc-900 rounded-3xl shadow-2xl p-6">
+        <h2 class="text-2xl font-bold mb-4">Histórico</h2>
 
-            <div id="historico" class="flex flex-col gap-3"></div>
+        <div id="historico" class="flex flex-col gap-3"></div>
       </div>
     </div>
 
