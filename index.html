@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="bg-zinc-950 text-white min-h-screen p-8">
-    <div class="flex justify-center items-start gap-8">
-      <div class="w-full max-w-4xl bg-zinc-900 p-8 rounded-3xl shadow-2xl">
+  <body class="bg-zinc-950 text-white min-h-screen p-4 md:p-8">
+    <div class="flex flex-col md:flex-row justify-center items-start gap-8">
+      <div class="w-full md:flex-1 max-w-4xl bg-zinc-900 p-6 md:p-8 rounded-3xl shadow-2xl">
         <h1 class="text-4xl font-bold mb-2">
           Controle Financeiro
           <i
@@ -94,35 +94,34 @@
           </div>
         </div>
 
-        <div class="flex justify-between items-center gap-4">
+        <div class="flex flex-col lg:flex-row justify-between pt-4 items-stretch gap-4">
           <button
             id="excluir"
-            class="w-160 bg-red-700 hover:bg-red-600 p-4 rounded-2xl mt-6"
+            class="w-full lg:w-auto bg-red-700 hover:bg-red-600 p-4 rounded-2xl"
           >
             Excluir
           </button>
 
-          <div class="flex justify-end gap-4">
+          <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
             <button
               id="exportarMd"
-              class="w-[160px] bg-zinc-700 hover:bg-zinc-600 p-4 rounded-2xl mt-6"
+              class="w-full sm:w-[160px] bg-zinc-700 hover:bg-zinc-600 p-4 rounded-2xl"
             >
               Exportar .md
             </button>
 
             <button
               id="exportarCsv"
-              class="w-[160px] bg-zinc-700 hover:bg-zinc-600 p-4 rounded-2xl mt-6"
+              class="w-full sm:w-[160px] bg-zinc-700 hover:bg-zinc-600 p-4 rounded-2xl"
             >
               Exportar .csv
             </button>
           </div>
-         
-          </div>
         </div>
-         <div
-            class="w-[320px] min-h-[700px] bg-zinc-900 rounded-3xl shadow-2xl p-6"
-          >
+      </div>
+      <div
+        class="w-full md:w-[320px] bg-zinc-900 rounded-3xl shadow-2xl p-6"
+      >
             <h2 class="text-2xl font-bold mb-4">Histórico</h2>
 
             <div id="historico" class="flex flex-col gap-3"></div>
