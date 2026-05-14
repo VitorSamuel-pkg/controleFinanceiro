@@ -11,7 +11,7 @@ const historicoEl = document.getElementById("historico");
 const btnGasto = document.getElementById("btnGasto");
 const btnGanho = document.getElementById("btnGanho");
 
-let tipo = "gasto";
+let tipo = "Gasto";
 
 let movimentacoes = [];
 let historicoDownloads = [];
@@ -53,7 +53,7 @@ document.getElementById("excluir").onclick = () => {
 }
 
 btnGasto.onclick = () => {
-  tipo = "gasto";
+  tipo = "Gasto";
 
   btnGasto.className = "flex-1 p-3 rounded-2xl bg-red-500";
 
@@ -61,7 +61,7 @@ btnGasto.onclick = () => {
 };
 
 btnGanho.onclick = () => {
-  tipo = "ganho";
+  tipo = "Ganho";
 
   btnGanho.className = "flex-1 p-3 rounded-2xl bg-green-500";
 
@@ -117,7 +117,7 @@ function atualizarTela() {
       </div>
     `;
 
-    if (item.tipo === "ganho") {
+    if (item.tipo === "Ganho") {
       ganhos += item.valor;
     } else {
       gastos += item.valor;
@@ -137,11 +137,11 @@ document.getElementById("exportarMd").onclick = () => {
   });
 
   let ganhos = movimentacoes
-    .filter((i) => i.tipo === "ganho")
+    .filter((i) => i.tipo === "Ganho")
     .reduce((a, b) => a + b.valor, 0);
 
   let gastos = movimentacoes
-    .filter((i) => i.tipo === "gasto")
+    .filter((i) => i.tipo === "Gasto")
     .reduce((a, b) => a + b.valor, 0);
 
   md += `\n## Resumo\n`;
