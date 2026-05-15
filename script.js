@@ -178,7 +178,7 @@ function atualizarTela() {
     <button onclick="removerItem(${i})" class="bg-red-500/10 text-red-500 text-sm py-2 rounded-xl hover:bg-red-500 hover:text-white transition-all">Excluir</button>
   </div>
 </div>
-    `;  
+    `;
 
     if (item.tipo === "Ganho") {
       ganhos += item.valor;
@@ -227,6 +227,7 @@ function removerItem(index) {
   atualizarTela();
 }
 
+
 document.getElementById("exportarMd").onclick = () => {
   if (movimentacoes.length === 0) {
     alert("Nada para exportar.");
@@ -259,10 +260,12 @@ document.getElementById("exportarCsv").onclick = () => {
     alert("Nada para exportar.");
     return;
   }
-  let csv = "Titulo,Tipo,Forma,Valor\n";
+  let csv = "Data,Titulo,Tipo,Forma,Valor\n";
+  
+  const dataISO = new Date().toISOString().split("T")[0];
 
   movimentacoes.forEach((item) => {
-    csv += `${item.titulo},${item.tipo},${item.forma},${item.valor.toFixed(2)}\n`;
+    csv += `${dataISO},${item.titulo},${item.tipo},${item.forma},${item.valor.toFixed(2)}\n`;
   });
 
   baixarArquivo(csv, "csv", "text/csv");
