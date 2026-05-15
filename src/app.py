@@ -7,10 +7,7 @@ caminho = 'C:/Users/52576815871/Documents/resumos'
 
 arquivos = glob.glob(os.path.join(caminho, '*.csv'))
 
-lista_dfs = []
+lista_df = [pd.read_csv(arquivo) for arquivo in arquivos]
 
-for arquivo in arquivos:
-    df = pd.read_csv(arquivo)
-    lista_dfs.append(df)
-df_concatenado = pd.concat(lista_dfs, ignore_index=True)
-print(df_concatenado.head())
+df_final = pd.concat(lista_df, ignore_index=True)
+print(df_final)
