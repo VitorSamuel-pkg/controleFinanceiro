@@ -17,28 +17,28 @@
     />
 
     <!-- Manifest -->
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="./manifest.json" />
 
     <!-- Cor do app -->
     <meta name="theme-color" content="#18181b" />
 
     <!-- Favicons -->
-    <link rel="icon" href="/icons/favicon.ico" />
+    <link rel="icon" href="./icons/favicon.ico" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/icons/favicon-32x32.png"
+      href="./icons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/icons/favicon-16x16.png"
+      href="./icons/favicon-16x16.png"
     />
 
     <!-- iPhone/iPad -->
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
 
     <!-- PWA iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -90,6 +90,19 @@
               class="w-full p-3 rounded-2xl bg-zinc-800 border border-zinc-700"
             />
           </div>
+        </div>
+
+        <div class="mt-4">
+          <label class="block mb-2">Tipo de pagamento</label>
+          <select
+            id="tipoPagamento"
+            class="w-full p-3 rounded-2xl bg-zinc-800 border border-zinc-700"
+          >
+            <option value="Pix">Pix</option>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Débito">Cartão Débito</option>
+            <option value="Crédito">Cartão Crédito</option>
+          </select>
         </div>
 
         <div class="flex gap-4 mt-6">
@@ -166,13 +179,13 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/service-worker.js")
+            .register("./service-worker.js")
             .then((registration) => {
               console.log("Service Worker registrado");
             })

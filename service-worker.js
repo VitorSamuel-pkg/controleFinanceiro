@@ -2,7 +2,7 @@
 // service-worker.js
 // ===============================
 
-const CACHE_NAME = 'controle-financeiro-v1';
+const CACHE_NAME = 'controle-financeiro-v2';
 
 const FILES_TO_CACHE = [
   './',
